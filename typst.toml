@@ -1,0 +1,20 @@
+[package]
+name = "lebenslauf"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Frank Zimmer"]
+license = "MIT AND CC-BY-4.0"
+description = "A compact German CV template for job applications."
+repository = "https://github.com/dressedfez/lebenslauf-typst"
+keywords = ["cv", "resume", "lebenslauf", "application", "german"]
+categories = ["cv"]
+compiler = "0.14.1"
+exclude = [
+  ".gitignore",
+  "main.pdf",
+]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
