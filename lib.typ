@@ -1,8 +1,8 @@
 // cv-template.typ
 // Zweispaltiges Lebenslauf-Template mit stabiler Sidebar auf der ersten Seite.
 
-#let cv-accent = rgb("#52645c")
-#let cv-text = rgb("#444444")
+#let cv-accent = rgb("#26428b")
+#let cv-text = rgb("#222222")
 #let cv-muted = rgb("#a7aba9")
 #let cv-line = rgb("#cfcfcf")
 #let cv-light = rgb("#e8e8e8")
@@ -16,7 +16,7 @@
   )
 
   set text(
-    font: "Arial",
+    font: "New Computer Modern",
     size: 8.8pt,
     fill: cv-text,
   )
