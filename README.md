@@ -81,6 +81,25 @@ By default, the CV starts with the applicant name instead of a generic `Lebensla
 )
 ```
 
+## Continuation Pages
+
+By default, `main` is rendered next to the sidebar. If a CV needs additional
+pages without a sidebar, pass that content through `continued-main`. It starts
+on a new full-width page:
+
+```typst
+#show: doc => cv-doc(
+  main: [
+    #cv-section([Berufserfahrung])
+    // first-page content
+  ],
+  continued-main: [
+    #cv-section([Ausbildung])
+    // full-width continuation content
+  ],
+)
+```
+
 ## Data Model
 
 The example keeps all CV content in arrays of dictionaries. This keeps the document easy to scan and makes it simple to add, remove, or reorder sections.
@@ -183,7 +202,7 @@ Project URLs are rendered as clickable provider icons in the right column. GitHu
 
 The main entry points are:
 
-- `cv-doc(profile: none, personal: none, languages: none, knowledge: none, main: [], title: none, sidebar-width: 28%, brand-icons: false, location-icon: "neutral")`
+- `cv-doc(profile: none, personal: none, languages: none, knowledge: none, main: [], continued-main: none, title: none, sidebar-width: 28%, brand-icons: false, location-icon: "neutral")`
 - `cv-profile(name, role, image-path: none, image-size: 4.3cm)`
 - `cv-section(title)`
 - `cv-entry(title, org, dates, bullets: ())`

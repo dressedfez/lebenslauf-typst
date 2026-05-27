@@ -322,6 +322,7 @@
   languages: none,
   knowledge: none,
   main: [],
+  continued-main: none,
   title: none,
   brand-icons: false,
   location-icon: "neutral",
@@ -345,4 +346,12 @@
       #main
     ],
   )
+
+  if continued-main != none [
+    #pagebreak()
+    #cv-page[
+      #v(0.42cm)
+      #continued-main
+    ]
+  ]
 }
