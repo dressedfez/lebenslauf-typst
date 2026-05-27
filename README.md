@@ -112,6 +112,16 @@ enable `brand-icons` on `cv-doc`:
 )
 ```
 
+The location icon is neutral gray by default. To use an alternate variant, set
+`location-icon` to `"accent"` or `"red"`:
+
+```typst
+#show: doc => cv-doc(
+  location-icon: "accent",
+  // ...
+)
+```
+
 Experience and education entries use the same shape:
 
 ```typst
@@ -173,7 +183,7 @@ Project URLs are rendered as clickable provider icons in the right column. GitHu
 
 The main entry points are:
 
-- `cv-doc(profile: none, personal: none, languages: none, knowledge: none, main: [], title: none, sidebar-width: 28%, brand-icons: false)`
+- `cv-doc(profile: none, personal: none, languages: none, knowledge: none, main: [], title: none, sidebar-width: 28%, brand-icons: false, location-icon: "neutral")`
 - `cv-profile(name, role, image-path: none, image-size: 4.3cm)`
 - `cv-section(title)`
 - `cv-entry(title, org, dates, bullets: ())`

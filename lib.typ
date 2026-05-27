@@ -8,6 +8,7 @@
 #let cv-light = rgb("#e8e8e8")
 #let cv-background = rgb("#ffffff")
 #let cv-brand-icons-enabled = state("cv-brand-icons-enabled", false)
+#let cv-location-icon-style = state("cv-location-icon-style", "neutral")
 
 #let cv-page(body) = {
   set page(
@@ -75,9 +76,16 @@
 
 #let cv-icon(name) = context {
   let suffix = if cv-brand-icons-enabled.get() { "-brand" } else { "" }
+  let location-suffix = if cv-location-icon-style.get() == "accent" {
+    "-accent"
+  } else if cv-location-icon-style.get() == "red" {
+    "-red"
+  } else {
+    ""
+  }
 
   if name == "pin" {
-    cv-fa-icon("location-dot")
+    cv-fa-icon("location-dot" + location-suffix)
   } else if name == "home" {
     cv-fa-icon("house")
   } else if name == "mail" {
@@ -316,8 +324,10 @@
   main: [],
   title: none,
   brand-icons: false,
+  location-icon: "neutral",
 ) = {
   cv-brand-icons-enabled.update(brand-icons)
+  cv-location-icon-style.update(location-icon)
 
   cv-layout-first-page(
     sidebar-width: sidebar-width,
