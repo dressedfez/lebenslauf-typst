@@ -94,11 +94,12 @@ Contact rows use `kind` and `body`:
   (kind: "mail", body: [mira.beispiel\@email.de]),
   (kind: "phone", body: [+49 171 234 56 78]),
   (kind: "linkedin", body: [linkedin.com/in/mirabeispiel]),
+  (kind: "orcid", body: [0000-0000-0000-0000]),
   (kind: "web", body: [mira-beispiel.dev]),
 )
 ```
 
-Supported contact kinds are `pin`, `home`, `mail`, `phone`, `linkedin`, and `web`.
+Supported contact kinds are `pin`, `home`, `mail`, `phone`, `linkedin`, `orcid`, and `web`.
 
 Experience and education entries use the same shape:
 

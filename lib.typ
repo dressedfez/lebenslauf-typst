@@ -83,6 +83,8 @@
     cv-fa-icon("phone")
   } else if name == "linkedin" {
     cv-fa-icon("linkedin")
+  } else if name == "orcid" {
+    cv-fa-icon("orcid")
   } else if name == "web" {
     cv-fa-icon("globe")
   } else {
