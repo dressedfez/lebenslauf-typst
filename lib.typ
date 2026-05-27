@@ -7,6 +7,7 @@
 #let cv-line = rgb("#cfcfcf")
 #let cv-light = rgb("#e8e8e8")
 #let cv-background = rgb("#ffffff")
+#let cv-brand-icons-enabled = state("cv-brand-icons-enabled", false)
 
 #let cv-page(body) = {
   set page(
@@ -72,7 +73,9 @@
   ]
 ]
 
-#let cv-icon(name) = {
+#let cv-icon(name) = context {
+  let suffix = if cv-brand-icons-enabled.get() { "-brand" } else { "" }
+
   if name == "pin" {
     cv-fa-icon("location-dot")
   } else if name == "home" {
@@ -84,9 +87,9 @@
   } else if name == "github" {
     cv-fa-icon("github")
   } else if name == "linkedin" {
-    cv-fa-icon("linkedin")
+    cv-fa-icon("linkedin" + suffix)
   } else if name == "orcid" {
-    cv-fa-icon("orcid")
+    cv-fa-icon("orcid" + suffix)
   } else if name == "web" {
     cv-fa-icon("globe")
   } else {
@@ -312,7 +315,10 @@
   knowledge: none,
   main: [],
   title: none,
+  brand-icons: false,
 ) = {
+  cv-brand-icons-enabled.update(brand-icons)
+
   cv-layout-first-page(
     sidebar-width: sidebar-width,
     title: title,
