@@ -81,6 +81,8 @@
     cv-fa-icon("envelope")
   } else if name == "phone" {
     cv-fa-icon("phone")
+  } else if name == "github" {
+    cv-fa-icon("github")
   } else if name == "linkedin" {
     cv-fa-icon("linkedin")
   } else if name == "orcid" {
