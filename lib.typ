@@ -326,6 +326,9 @@
   title: none,
   brand-icons: false,
   location-icon: "neutral",
+  personal-title: [Persönliche Daten],
+  languages-title: [Sprachen],
+  knowledge-title: [Kenntnisse],
 ) = {
   cv-brand-icons-enabled.update(brand-icons)
   cv-location-icon-style.update(location-icon)
@@ -337,9 +340,9 @@
       #v(0.42cm)
       #if profile != none [#profile]
       #v(0.52cm)
-      #if personal != none [#cv-sidebar-section([Persönliche Daten], personal)]
-      #if languages != none [#cv-sidebar-section([Sprachen], languages)]
-      #if knowledge != none [#cv-sidebar-section([Kenntnisse], knowledge)]
+      #if personal != none [#cv-sidebar-section(personal-title, personal)]
+      #if languages != none [#cv-sidebar-section(languages-title, languages)]
+      #if knowledge != none [#cv-sidebar-section(knowledge-title, knowledge)]
     ],
     main: [
       #v(0.42cm)
